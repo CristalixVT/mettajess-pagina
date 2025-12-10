@@ -170,9 +170,19 @@
     <p>Su comunidad, la Isla Pollito, es un lugar lleno de amor, humor y amistad.</p>
     <p>Sus streams mezclan diversión, risas y buenos momentos.</p>
 
-    <a href="https://www.twitch.tv/mettajess?lang=es" target="_blank">
-    <img class="moverImg" id="avatar" src="mettajessavatar.png" alt="Avatar de Mettajess">
-</a>
+    <img class="moverImg" id="avatar" src="mettajessavatar.png" 
+     alt="Avatar de Mettajess" usemap="#mapaMettajess">
+
+<map name="mapaMettajess">
+   
+    <area shape="rect" coords="0,0,230,250" 
+          href="https://www.twitch.tv/mettajess?lang=es" target="_blank">
+
+   
+    <area shape="rect" coords="0,250,230,460" 
+          href="https://ko-fi.com/mettajesskawaii" target="_blank">
+</map>
+
 
 
     <h2>Video especial</h2>
@@ -191,38 +201,39 @@
 
     <h2>Encuesta: ¿Qué te gusta más del stream?</h2>
 
-    <form id="encuestaForm" onsubmit="enviarEncuesta(event)">
+<form action="mailto:krizz7640@gmail.com" method="post" enctype="text/plain">
+    
+    <label>Contenido favorito:</label>
+    <select name="Contenido favorito">
+        <option>Just Chatting</option>
+        <option>Juegos</option>
+        <option>Reacciones</option>
+        <option>CP (Club Penguin)</option>
+        <option>Eventos especiales</option>
+    </select>
 
-        <label>Contenido favorito:</label>
-        <select>
-            <option>Just Chatting</option>
-            <option>Juegos</option>
-            <option>Reacciones</option>
-            <option>CP (Club Penguin)</option>
-            <option>Eventos especiales</option>
-        </select>
+    <label>Motivos por los que te quedas (elige una):</label>
+    <select name="Motivo" multiple size="5">
+        <option>Su personalidad</option>
+        <option>La comunidad</option>
+        <option>Su humor</option>
+        <option>Los juegos</option>
+        <option>La estética del stream</option>
+    </select>
 
-        <label>Motivos por los que te quedas (elige una):</label>
-        <select multiple size="5">
-            <option>Su personalidad</option>
-            <option>La comunidad</option>
-            <option>Su humor</option>
-            <option>Los juegos</option>
-            <option>La estética del stream</option>
-        </select>
+    <label>Bebida que tomas para ver el stream:</label>
+    <select name="Bebida">
+        <option>Agua</option>
+        <option>Manzanilla</option>
+        <option>Refresco</option>
+        <option>Jugo</option>
+        <option>Energético</option>
+    </select>
 
-        <label>Bebida que tomas para ver el stream:</label>
-        <select>
-            <option>Agua</option>
-            <option>Manzanilla</option>
-            <option>Refresco</option>
-            <option>Jugo</option>
-            <option>Energético</option>
-        </select>
+    <input type="submit" value="Enviar encuesta">
+    <input type="reset" value="Borrar respuestas">
+</form>
 
-        <input type="submit" value="Enviar encuesta">
-        <input type="reset" value="Borrar respuestas">
-    </form>
 
     <h2>Ir al avatar</h2>
     <a href="#avatar">Volver al avatar 💖</a>
@@ -325,27 +336,28 @@
 <div class="contenedor">
     <h2 style="color:#ff99cc;">Encuesta especial</h2>
 
-    <form id="encuestaForm" onsubmit="enviarEncuesta(event)">
-        <label>¿Qué es lo que más te gusta del stream de Mettajess?</label>
-        <br>
-        <select required>
-            <option>Su energía bonita ✨</option>
-            <option>La Isla Pollito 🐤</option>
-            <option>Las risas y el ambiente</option>
-            <option>El chat y la comunidad</option>
-            <option>Sus juegos y dinámicas</option>
-        </select>
+<form action="mailto:krizz7640@gmail.com" method="post" enctype="text/plain">
 
-        <div class="card">
-            <label>¿Qué mejorarías o qué te gustaría ver en futuros streams?</label>
-            <br>
-            <textarea rows="4" placeholder="Escribe tu idea aquí..."></textarea>
-        </div>
+    <label>¿Qué es lo que más te gusta del stream de Mettajess?</label><br>
+    <select name="Lo que mas te gusta" required>
+        <option>Su energía bonita ✨</option>
+        <option>La Isla Pollito 🐤</option>
+        <option>Las risas y el ambiente</option>
+        <option>El chat y la comunidad</option>
+        <option>Sus juegos y dinámicas</option>
+    </select>
 
-        <br>
-        <input type="submit" value="Enviar encuesta">
-        <input type="reset" value="Borrar respuestas">
-    </form>
+    <div class="card">
+        <label>¿Qué mejorarías o qué te gustaría ver en futuros streams?</label><br>
+        <textarea name="Sugerencia" rows="4" placeholder="Escribe tu idea aquí..."></textarea>
+    </div>
+
+    <br>
+    <input type="submit" value="Enviar encuesta">
+    <input type="reset" value="Borrar respuestas">
+
+</form>
+
 </div>
 
 <script>
@@ -357,4 +369,4 @@ function enviarEncuesta(e) {
 
 </body>
 </html>
-	
+		
